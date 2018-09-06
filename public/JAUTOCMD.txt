@@ -1,0 +1,317 @@
+{
+	"AUTOSN": "OPF101C_20180625x1",
+	"DEVLIST": {
+		"GROWLED": {
+			"MODE":0, 
+			"STATU":0,
+			"TIMER": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"ST": "0000",
+				"ON": "0000",
+				"OFF": "0000"
+			},
+			"SCHEDULE": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"WEEK": "0000",
+				"ONLOOP": [
+				  "00000000",
+				  "00000000"
+				]
+			}
+		},
+		"CYCLEFAN": {
+			"MODE":0, 
+			"STATU":0,
+			"TIMER": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"EGRROUP": ["A0","A1"],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"ST": "0000",
+				"ON": "0000",
+				"OFF": "0000"
+			},
+			"SCHEDULE": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"EGRROUP": ["A0","A1"],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"WEEK": "0000",
+				"ONLOOP": [
+				  "00000000",
+				  "00000000"
+				]
+			}
+		},
+		"SPRAY": {
+			"MODE":0, 
+			"STATU":0,
+			"TIMER": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"ST": "0000",
+				"ON": "0000",
+				"OFF": "0000"
+			},
+			"SCHEDULE": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"WEEK": "0000",
+				"ONLOOP": [
+				  "00000000",
+				  "00000000"
+				]
+			}
+		},
+		"REFRESH": {
+			"MODE":0, 
+			"STATU":0,
+			"TIMER": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"ST": "0000",
+				"ON": "0000",
+				"OFF": "0000"
+			},
+			"SCHEDULE": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"WEEK": "0000",
+				"ONLOOP": [
+				  "00000000",
+				  "00000000"
+				]
+			}
+		},
+		"UV": {
+			"MODE":0, 
+			"STATU":0,
+			"TIMER": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"ST": "0000",
+				"ON": "0000",
+				"OFF": "0000"
+			},
+			"SCHEDULE": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"WEEK": "0000",
+				"ONLOOP": [
+				  "00000000",
+				  "00000000"
+				]
+			}
+		},
+		"PUMP": {
+			"MODE":0,
+			"STATU":0, 
+			"TIMER": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"ST": "0000",
+				"ON": "0000",
+				"OFF": "0000"
+			},
+			"SCHEDULE": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"WEEK": "0000",
+				"ONLOOP": [
+				  "00000000",
+				  "00000000"
+				]
+			}
+		},
+		"GROWUPDOWN": {
+			"MODE":0, 
+			"STATU":0,
+			"TIMER": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"ST": "0000",
+				"ON": "0000",
+				"OFF": "0000"
+			},
+			"SCHEDULE": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"WEEK": "0000",
+				"ONLOOP": [
+				  "00000000",
+				  "00000000"
+				]
+			}
+		},
+		"AIRCON": {
+			"MODE":0,
+			"STATU":0, 
+			"RUNLOOP":{
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"TEMPERATURE!LOOP": "00000000"
+			}
+		},
+		"AIRRH": {
+			"MODE":0,
+			"STATU":0, 
+			"RUNLOOP":{
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"RH!LOOP": "00000000"
+			}
+		},
+		"WATERTM": {
+			"MODE":0, 
+			"RUNLOOP":{
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"TEMPERATURE!LOOP": "00000000"
+			}
+		},
+		"CO2": {
+			"MODE":0, 
+			"STATU":0,
+			"RUNLOOP":{
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"CO2!LOOP": "00000000"
+			}
+		},
+		"OPWAVE": {
+			"MODE":0, 
+			"STATU":0, 
+			"TIMER": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"ST": "0000",
+				"ON": "0000",
+				"OFF": "0000"
+			},
+			"SCHEDULE": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"PWM": {
+				  "01": 0,
+				  "02": 0,
+				  "03": 0,
+				  "04": 0
+				},
+				"WEEK": "0000",
+				"ONLOOP": [
+				  "00000000",
+				  "00000000"
+				]
+			}
+		},
+		"DOSE": {
+			"MODE":0,
+			"STATU":0,
+			"EC": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"STU": "00000000"
+			},
+			"PH": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"STU": "00000000"
+			},
+			"RUNLOOP": {
+				"EPOS": [{"POS":"E001","CMD":"PUMP","GROUP":0},{"POS":"E001","CMD":"PUMP","GROUP":0}],
+				"DOSE!LOOP": "000000000000"
+			}
+		}
+	},
+	"SENSORAUTO":{
+		"E100":{
+			"MODETRIG":[],
+			"MODELOOP":[],
+			"DEVENT":{
+				"EVNID":"0000",
+				"EVNLIST":[]
+			}
+		},
+		"E101":{
+			"MODETRIG":[],
+			"MODELOOP":[],
+			"DEVENT":{
+				"EVNID":"0000",
+				"EVNLIST":[]
+			}
+		}
+	},
+	"EVENTID":{
+		"0001":[],
+		"0002":[]
+	} 
+}
+

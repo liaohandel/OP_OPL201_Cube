@@ -1,0 +1,189 @@
+{
+	"PDDATA":{
+		"UUID": "OFA1A0019454966034C16A9A",
+		"dsnurl": "http://106.104.112.56/Cloud/API/linkbox.php",
+		"videodsnurl": "http://106.104.112.56/Cloud/API/videobox.php",
+		"devloadurl": "http://106.104.112.56/Cloud/API/DeviceUpdate.php",
+		"typeloadurl": "http://106.104.112.56/Cloud/API/TypeUpdate.php",
+		"linkoffmode":0,
+		"Devtab": {
+		"D011": {
+			"STATU": {"devadd":33,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D012": {
+			"STATU": {"devadd":34,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D013": {
+			"STATU": {"devadd":35,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D014": {
+			"STATU": {"devadd":36,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D015": {
+			"STATU": {"devadd":37,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D016": {
+			"STATU": {"devadd":38,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D017": {
+			"STATU": {"devadd":39,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D018": {
+			"STATU": {"devadd":40,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D019": {
+			"STATU": {"devadd":41,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D01A": {
+			"STATU": {"devadd":42,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D01B": {
+			"STATU": {"devadd":43,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D01C": {
+			"STATU": {"devadd":44,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D01D": {
+			"STATU": {"devadd":45,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D01E": {
+			"STATU": {"devadd":46,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		},
+		"D01F": {
+			"STATU": {"devadd":47,"LINK": 0,"GROUP": 0,"MACADD":"000000000000"},
+			"C71": {"sub": 0,"stu": 0,"Data": 0},
+			"C72": {"sub": 0,"stu": 0,"Data": 0},
+			"C73": {"sub": 0,"stu": 0,"Data": 0},
+			"C7C": {"sub": 0,"stu": 0,"Data": 0},
+			"C7E": {"sub": 0,"stu": 0,"Data": 0},
+			"C74": {"sub": 0,"stu": 0,"Data": 0}
+		}
+	  }
+	},	
+	"addposmap" : {	
+        "21":"D011",
+        "22":"D012",
+        "23":"D013",
+        "24":"D014",
+        "25":"D015",
+        "26":"D016",
+        "27":"D017",
+        "28":"D018",
+        "29":"D019",
+        "2A":"D01A",
+        "2B":"D01B",
+        "2C":"D01C",
+        "2D":"D01D",
+        "2E":"D01E",
+        "2F":"D01F"
+	},
+	"subcmd":{
+	    "OFF":0,
+		"ON":1,
+	    "LOAD":2,
+	    "AUTO":3,
+	    "SET":4,
+	    "LOW":5,
+	    "HI":6
+	},
+	"CMDDATA":{
+		"LED":["C71","POS","GROUP","Action","UUID","STU"],
+		"PUMP":["C72","POS","GROUP","Action","UUID"],
+		"AIRFAN":["C73","POS","GROUP","Action","UUID","STU"],
+		"GROUP":["C74","POS","GROUP","Action","UUID"],
+		"UV":["C75","POS","GROUP","Action","UUID"],
+		"CO2":["C76","POS","GROUP","Action","UUID"],
+		"TEMPERATURE":["C77","POS","GROUP","Action","UUID"],
+		"RH":["C78","POS","GROUP","Action","UUID"],
+		"WATERLEVEL":["C79","POS","GROUP","Action","UUID"],
+		"ELECTRONS":["C7A","POS","GROUP","Action","UUID"],
+		"PH":["C7B","POS","GROUP","Action","UUID"],
+		"PWM":["C7C","POS","GROUP","Action","UUID"],
+		"SETTIME":["C7D","POS","GROUP","Action","UUID","STU"],
+		"AUTO":["C7E","POS","GROUP","Action","UUID","STU"]
+	}
+}
