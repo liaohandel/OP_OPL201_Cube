@@ -1,0 +1,23 @@
+{
+
+ /**
+   * Application configuration section
+   * http://pm2.keymetrics.io/docs/usage/application-declaration/
+   */
+  apps : [
+    // #1
+    {
+		name	: 'webapp_gx6.js',
+		script  : '/home/pi/opcom_prj/gotest3_cube/webapp_gx6.js',
+        cwd		: "/home/pi/opcom_prj/gotest3_cube/",
+		out_file 	: "/logs/null",
+		error_file 	: "/logs/null",
+		exec_mode  	: "cluster",
+		env: {
+			NODE_ENV: "production"
+		}
+    }
+  ]
+
+
+}
