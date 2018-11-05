@@ -11,8 +11,56 @@
 		script  : "/home/pi/opcom_prj/gotest3_cube/webapp_gx6.js",
         cwd		: "/home/pi/opcom_prj/gotest3_cube/",
 		out_file 	: "/dev/null",
-		error_file 	: "/dev/null",
+		error_file 	: "/logs/runerr.txt",
 		exec_mode  	: "cluster",
+		env: {
+			NODE_ENV: "production"
+		}
+    },
+    // #2
+    {
+		name   	: "webapp9v8001.js",
+		script 	: "/home/pi/opcom_prj/gotest3_cube/webapp9v8001.js",
+        cwd		: "/home/pi/opcom_prj/gotest3_cube/",
+		out_file : "/dev/null",
+		error_file : "/dev/null",
+		exec_mode  : "cluster",
+		env: {
+			NODE_ENV: "production"
+		}
+    },
+    // #3
+    {
+		name 	: "webapp9v8002.js",
+		script 	: "/home/pi/opcom_prj/gotest3_cube/webapp9v8002.js",
+        cwd		: "/home/pi/opcom_prj/gotest3_cube/",
+		out_file : "/dev/null",
+		error_file : "/dev/null",
+		exec_mode  : "cluster",
+		env: {
+			NODE_ENV: "production"
+		}
+    },
+    // #4
+    {
+		name    : "webapp9v8003.js",
+		script  : "/home/pi/opcom_prj/gotest3_cube/webapp9v8003.js",
+        cwd		: "/home/pi/opcom_prj/gotest3_cube/",
+		out_file : "/dev/null",
+		error_file : "/dev/null",
+		exec_mode  : "cluster",
+		env: {
+			NODE_ENV: "production"
+		}
+    },
+    // #5
+    {
+		name    : "webapp9v8004.js",
+		script  : "/home/pi/opcom_prj/gotest3_cube/webapp9v8004.js",
+        cwd		: "/home/pi/opcom_prj/gotest3_cube/",
+		out_file : "/dev/null",
+		error_file : "/dev/null",
+		exec_mode  : "cluster",
 		env: {
 			NODE_ENV: "production"
 		}

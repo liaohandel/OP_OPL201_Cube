@@ -2278,57 +2278,79 @@ app.listen(setport, function () {
 		
 		
 		if(pdjobj.PDDATA.linkoffmode == 0){
+			ngrok.disconnect(); // disconnect ngrok when new connect 
+			
 			ngrok.connect(setport,function (err, url) {
 				seturl = url
 				chkurl = seturl+"/connectcheck"
 				console.log("link=>"+seturl)
-				setddsnurl = ddsnurl+'?DeviceIP='+seturl+'&UUID='+setuuid
-				client.get(setddsnurl, function (data, response) {
+				setddsnurl = ddsnurl+'?DeviceIP='+seturl+'&UUID='+setuuid;
+					webuploadloop = 0;
+				
+				client.get(setddsnurl, cargs, function (data, response) {
 					// parsed response body as js object
 					console.log("get ok...") 
 					//console.log(data.toString());
 					//raw response 
 					//console.log(response.query);
 					webuploadloop = 0;
-					setInterval(function(){
-					  //console.log('test link ...');
-						chkurl = seturl+"/connectcheck"
-						client.get(chkurl, function (data, response) {                        
-							//console.log("linkchk ...")                        
-							//console.log(data.toString());
-							let chkstr = data.toString();
-							if(chkstr === "ready"){                       
-								console.log("linkchk ok ...",linkchkcount);          
-								linkchkcount=0;
-								if(webuploadloop==0){
-									console.log("run load ..."+webuploadloop);
-									//for(pp in typeloadset){
-									//	ct = devloadscan(typeloadset[pp]);	//load pos data to buffer 10min
-									//}
-									device_stulinkweb(sensorbuff);
-									for(pp in typeloadset)devloadscan(typeloadset[pp]);	//load pos data to buffer 10min												
-									for(pp in typechannelset)devchannelscan(typechannelset[pp]);
-									
-								}else if(webuploadloop==1){
-									console.log("run webupdate ..."+webuploadloop);
-									for(pp in typeloadset)typeloadlinkweb(typeloadset[pp]);//upload pos type up webdb 10min	
-									for(pp in typechannelset)typeloadlinkweb(typechannelset[pp]);								
-									for(pp in typechannelset)typechannellinkweb(typechannelset[pp]);
-									
-								}
-								webuploadloop++;
-								if(webuploadloop>=2)webuploadloop=0;
-							} else {							                       
-								console.log("linkchk fail ...",linkchkcount);
-								linkchkcount++;	
-								if(((typeof seturl) == "undefined" ) || (linkchkcount >=3) ){
-									console.log("get x11...") 
-									reload85ddsn();
-								}						
+
+					
+				}).on("error", function(err) {console.log("err for client");}).on('requestTimeout', function (req) {req.abort();});
+				
+				//===== ngrok link check @ 10min ================						
+				setInterval(function(){
+					console.log('test link ...');
+					chkurl = seturl+"/connectcheck"
+					client.get(chkurl, function (data, response) {                        
+						//console.log("linkchk ...")                        
+						//console.log(data.toString());
+						let chkstr = data.toString();
+						if(chkstr === "ready"){                       
+							console.log("linkchk ok ...",linkchkcount);          
+							linkchkcount=0;
+							if(webuploadloop==0){
+								console.log("run load ..."+webuploadloop);
+								//for(pp in typeloadset){
+								//	ct = devloadscan(typeloadset[pp]);	//load pos data to buffer 10min
+								//}
+								device_stulinkweb(sensorbuff);
+								for(pp in typeloadset)devloadscan(typeloadset[pp]);	//load pos data to buffer 10min												
+								for(pp in typechannelset)devchannelscan(typechannelset[pp]);
+								
+							}else if(webuploadloop==1){
+								console.log("run webupdate ..."+webuploadloop);
+								for(pp in typeloadset)typeloadlinkweb(typeloadset[pp]);//upload pos type up webdb 10min	
+								for(pp in typechannelset)typeloadlinkweb(typechannelset[pp]);								
+								for(pp in typechannelset)typechannellinkweb(typechannelset[pp]);
+								
 							}
-						});
-					}, 3 * 60 * 1000);
-				}).on("error", function(err) {console.log("err for client");});
+							webuploadloop++;
+							if(webuploadloop>=2)webuploadloop=0;
+						} else {							                       
+							console.log("linkchk fail ...",linkchkcount);
+							linkchkcount++;	
+							if(((typeof seturl) == "undefined" ) || (linkchkcount >=3) ){
+								console.log("get x11...");       
+								linkchkcount=0;
+								reload85ddsn();
+							}						
+						}
+					}).on("error", function(err) {
+						console.log("err for client");
+						console.log("linkchk fail ...",linkchkcount) 
+						linkchkcount++;
+						//relink DDNS for ngrok 
+						if(((typeof seturl) == "undefined" ) || (linkchkcount >=3) ){
+							console.log("get x12...") ;     
+							linkchkcount=0;
+							reload85ddsn();
+						}							
+					});
+					
+				}, 5 * 60 * 1000);
+				
+				
 			});	
 		}else if(pdjobj.PDDATA.linkoffmode == 1){//off link mode
 			console.log(">>OFF Link Mode !");
@@ -2362,10 +2384,17 @@ function reload75ddsn(){
 
 function reload85ddsn(){	
     console.log('recall ngrok ...');
+	ngrok.disconnect(); // stops all
+	//ngrok.kill(); // kill all link
+	
 	ngrok.connect('192.168.5.85:3000',function (err, url) {
+		if(url === undefined ){ //### this chek use the ngrok is fail  unlink .... 20180909 
+			url="http://0000";
+		}
 		seturl = url
         chkurl = seturl+"/connectcheck"
 		console.log("link Cube85C=>"+seturl);
+		
         setddsnurl = ddsnurl+'?DeviceIP='+seturl+'&UUID='+setuuid
 		client.get(setddsnurl, function (data, response) {
 			console.log("get ok...") 				
