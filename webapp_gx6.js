@@ -1,4 +1,5 @@
 console.log("[linkgateway ] start Cube gx6 180824x1 ...");
+//var reload = require('require-reload')(require);
 
 var EventEmitter = require('events').EventEmitter; 
 var event = new EventEmitter(); 
@@ -2297,10 +2298,10 @@ app.listen(setport, function () {
 				
 				//===== ngrok link check @ 10min ================						
 				setInterval(function(){
-					console.log('test link ...');
+					console.log('test link ...' + seturl);
 					chkurl = seturl+"/connectcheck"
 					client.get(chkurl, function (data, response) {                        
-						//console.log("linkchk ...")                        
+						console.log("linkchk ..."+data.toString());
 						//console.log(data.toString());
 						let chkstr = data.toString();
 						if(chkstr === "ready"){                       
@@ -2382,8 +2383,11 @@ function reload75ddsn(){
 function reload85ddsn(){	
     console.log('recall ngrok ...');
 	ngrok.disconnect(); // stops all
+	exec('sudo pm2 restart webapp_gx6',function(){
+		console.log("restart link  webapp ... ")
+	});
 	//ngrok.kill(); // kill all link
-	
+	//ngrok = reload('ngrok');
 	ngrok.connect('192.168.5.85:3000',function (err, url) {
 		if(url === undefined ){ //### this chek use the ngrok is fail  unlink .... 20180909 
 			url="http://0000";
