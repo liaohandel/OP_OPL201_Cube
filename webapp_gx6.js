@@ -688,8 +688,6 @@ function devloadlinkweb(ldevarr){
 	}).on("error", function(err) {console.log("err for client");});
 }
 
-
-
 var cmdtab={
 	"C71":"LED",
 	"C72":"PUMP",
@@ -1019,7 +1017,6 @@ app.get('/typecheck', function (req, res) {
 	
 });
 
-
 app.get('/fwupdate_start', function (req, res) { //sensor PDDATA buffer upload to web DB test ! 
     res.send("ready fw update link start up!");			
 	exec(start_cmdStr, function(){
@@ -1035,7 +1032,6 @@ app.get('/fwupdate_stop', function (req, res) { //sensor PDDATA buffer upload to
 	});
 	
 });
-
 
 app.get('/PDINFO', function (req, res) {
 	console.log(req.query);	
@@ -1963,24 +1959,26 @@ app.get('/PH', function (req, res) {
 })
 //=====================================================
 app.get('/DeviceList', function (req, res) {
-  console.log(req.query);	
-  let cmd = req.query.Action
-  let uuid = req.query.UUID
-  let pos = req.query.POS
-  let group = Number(req.query.GROUP)
-  if( (uuid != setuuid) || (typeof(cmd) == "undefined") || (typeof(pos) == "undefined") ){
-	jobj = { "success" : "false" };  
+	console.log(req.query);	
+	let cmd = req.query.Action
+	let uuid = req.query.UUID
+	let pos = req.query.POS
+	let group = Number(req.query.GROUP)
+	
+	if( (uuid != setuuid) || (typeof(cmd) == "undefined") || (typeof(pos) == "undefined") ){
+		jobj = { "success" : "false" };  
+		console.log("[DeviceList]="+JSON.stringify(jobj));
+		res.json(jobj);
+		return;
+	}
+	jobj = {  "success" : "true" , "UUID" : uuid  }; 
 	console.log("[DeviceList]="+JSON.stringify(jobj));
-	res.json(jobj);
-	return;
-  }
-  jobj = {  "success" : "true" , "UUID" : uuid  }; 
-  console.log("[DeviceList]="+JSON.stringify(jobj));
-  if(cmd != "ON")res.json(jobj);
-  
-   //==================================   
-   let ttbuf = Buffer.from(cmdcode.rs485v029.ackcmd,'hex');
-   if(pos == "0000"){
+	if(cmd != "ON")res.json(jobj);
+
+	//==================================   
+	let ttbuf = Buffer.from(cmdcode.rs485v029.ackcmd,'hex');
+	
+	if(pos == "0000"){
 		if(cmd == "LOAD"){	
 			return; //Cube no Load   
 			ct = devlinkscan(1);//1:cube device 2:linkbox  3:Container 
@@ -1998,39 +1996,38 @@ app.get('/DeviceList', function (req, res) {
 			});			
 			return;
 		}
-   }else if(pos in pdjobj.PDDATA.Devtab ){
+	}else if(pos in pdjobj.PDDATA.Devtab ){
 		//if(pdjobj.PDDATA.Devtab[pos].STATU.LINK == 1){	
-			if(cmd == "LOAD"){	   
-				ct = devloadscan(pos);			
-				setTimeout(function() { 
-					event.emit('devposload_event',(pos)); 
-				}, ct * 350);		
-			}else{
-				//devposloaddata(pos);
-				j3obj={}
-				j3obj.success="true";
-				j3obj.UUID=setuuid;		
-				j3obj.POSTab = pos;
-				j3obj.GROUP=pdjobj.PDDATA.Devtab[pos].STATU.GROUP;
-				j3obj.Status=pdjobj.PDDATA.Devtab[pos].STATU.LINK;
-				ondevposbuff(pos,function(jj){		
-					j3obj.result = jj;
-					res.json(j3obj);
-				});				
-				return;
-			}
+		if(cmd == "LOAD"){	   
+			ct = devloadscan(pos);			
+			setTimeout(function() { 
+				event.emit('devposload_event',(pos)); 
+			}, ct * 350);		
+		}else{
+			//devposloaddata(pos);
+			j3obj={}
+			j3obj.success="true";
+			j3obj.UUID=setuuid;		
+			j3obj.POSTab = pos;
+			j3obj.GROUP=pdjobj.PDDATA.Devtab[pos].STATU.GROUP;
+			j3obj.Status=pdjobj.PDDATA.Devtab[pos].STATU.LINK;
+			ondevposbuff(pos,function(jj){		
+				j3obj.result = jj;
+				res.json(j3obj);
+			});				
+			return;
+		}
 		//}else{	
 		//	console.log("no link="+pos+"#"+pdjobj.PDDATA.Devtab[pos].STATU.LINK)
 		//	if(cmd == "ON")res.json(jobj);
 		//	return;			
 		//}
-   }else{			
+	}else{			
 		if(cmd == "ON")res.json(jobj);
 		return	   
-   }
-   //set2dev(ttbuf);
+	}
+	//set2dev(ttbuf);
 })
-
 
 //=====================================================
 app.get('/PWM', function (req, res) {
@@ -2159,6 +2156,7 @@ app.get('/SETTIME', function (req, res) {
 	//set2dev(ttbuf);	
 	totxbuff(ttbuf);
 })
+
 //=====================================================
 app.get('/AUTO', function (req, res) {
 	console.log(req.query);	
@@ -2186,25 +2184,25 @@ app.get('/AUTO', function (req, res) {
 		//dev active
 		ttbuf = Buffer.from(cmdcode.rs485v029.s7ecmd,'hex'); 
 		if(pos in pdjobj.PDDATA.Devtab){ //check pos is working
-		   ttbuf[1]= pdjobj.PDDATA.Devtab[pos].STATU.devadd;
+			ttbuf[1]= pdjobj.PDDATA.Devtab[pos].STATU.devadd;
 		}else{			
-		   return;
+			return;
 		} 
 		if(cmd in pdjobj.subcmd){ //check subcmd is working
-		   let cmdindex = pdjobj.subcmd[cmd]
-		   ttbuf[4]=pdjobj.subcmd[cmd];
-		   ttbuf[5]=nstu;
-		   //update to josn buffer 
+			let cmdindex = pdjobj.subcmd[cmd]
+			ttbuf[4]=pdjobj.subcmd[cmd];
+			ttbuf[5]=nstu;
+			//update to josn buffer 
 			pdjobj.PDDATA.Devtab[pos].C7E.sub=cmdindex;		
 			pdjobj.PDDATA.Devtab[pos].C7E.stu=nstu;
 		}else{
-		   //ttbuf[4]=0x55 no effect subcmd 
-		   return;
+			//ttbuf[4]=0x55 no effect subcmd 
+			return;
 		}
 	}else if(group < 10 ){
-	   //group Control command "s97cmd" :  "[f5][fe][05][97][00][00][00][97]"
-	   ttbuf = Buffer.from(cmdcode.rs485v029.s9acmd,'hex'); //0x9a auto group control 		    
-	   if(cmd in pdjobj.subcmd){
+		//group Control command "s97cmd" :  "[f5][fe][05][97][00][00][00][97]"
+		ttbuf = Buffer.from(cmdcode.rs485v029.s9acmd,'hex'); //0x9a auto group control 		    
+		if(cmd in pdjobj.subcmd){
 			ttbuf[4]=pdjobj.subcmd[cmd];
 			ttbuf[5]=nstu;
 			ttbuf[6]=group;
@@ -2220,15 +2218,14 @@ app.get('/AUTO', function (req, res) {
 					}
 				}				
 		   }
-	   }else{
+		}else{
 		   //ttbuf[4]=0x55
 		   return;
-	   }   
-   }else{
-	   //group is err
+		}   
+	}else{
+		//group is err
 		return;
-   }
-   
+	}
 	//set2dev(ttbuf);	
 	totxbuff(ttbuf);
 })

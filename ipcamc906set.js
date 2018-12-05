@@ -43,7 +43,7 @@ var ready = "http://[[a-zA-Z0-9.-/_]+[[a-zA-Z0-9-./_]+[[a-zA-Z0-9-.:/_]+[:0-9]+"
 var inUse = /address already in use/;
 //const ls = spawn('./ngrok', ['-config=ngrok.cfg', '192.168.5.106:8006']);
 
-const rrngrok = spawn('/home/pi/opcom_prj/gotest2_linkbox/llngrok', ['-config=/home/pi/opcom_prj/gotest2_linkbox/ngrok.cfg','--log=stdout', '192.168.5.106:8006']);
+const rrngrok = spawn('/home/pi/opcom_prj/gotest3_cube/llngrok', ['-config=/home/pi/opcom_prj/gotest3_cube/ngrok.cfg','--log=stdout', '192.168.5.106:8006']);
 
 
 var noop = function() {};
